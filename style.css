@@ -243,12 +243,12 @@ section{
     right: 200px;
 }
 #card3{
-    position: relative;
+    position: absolute;
     left: 360px;
     top: 300px;
 }
 #card4{
-    position: relative;
+    position: absolute;
     right: 360px;
     top: 300px;
 }

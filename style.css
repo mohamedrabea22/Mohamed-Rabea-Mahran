@@ -503,7 +503,7 @@ section{
         padding: 80px 20px;
     }
     .projects{
-        height: 800px
+        height: 1000px;
     }
     .project-card{
         width: 250px;
@@ -520,9 +520,13 @@ section{
     #card3{
         position: relative;
         left: 0px;
-        bottom: 0px;
+        top: -15px;
     }
-    
+    #card4{
+        position: relative;
+        left: 0px;
+        top: 15px;
+    }
     #let{
         font-size: 2.5em;
         text-align: center;

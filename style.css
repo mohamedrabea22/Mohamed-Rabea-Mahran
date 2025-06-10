@@ -519,6 +519,11 @@ section{
         left: 0px;
         bottom: 0px;
     }
+    #card4{
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+    }
     #let{
         font-size: 2.5em;
         text-align: center;

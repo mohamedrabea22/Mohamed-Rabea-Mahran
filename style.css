@@ -502,7 +502,7 @@ section{
     section{
         padding: 80px 20px;
     }
-    #projects{
+    .projects{
         height: 800px
     }
     .project-card{

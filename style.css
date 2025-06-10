@@ -243,12 +243,12 @@ section{
     right: 200px;
 }
 #card3{
-    position: absolute;
+    position: relative;
     left: 360px;
     top: 300px;
 }
 #card4{
-    position: absolute;
+    position: relative;
     right: 360px;
     top: 300px;
 }
@@ -519,11 +519,7 @@ section{
         left: 0px;
         bottom: 0px;
     }
-    #card4{
-        position: relative;
-        left: 0px;
-        bottom: 0px;
-    }
+    
     #let{
         font-size: 2.5em;
         text-align: center;

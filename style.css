@@ -252,6 +252,11 @@ section{
     right: 360px;
     top: 300px;
 }
+#card5{
+    position: relative;
+    right: 360px;
+    top: 560px;
+}
 .project-card:hover{
     transform: scale(1.1);
 }
@@ -503,7 +508,7 @@ section{
         padding: 80px 20px;
     }
     .projects{
-        height: 1250px;
+        height: 1550px;
     }
     .project-card{
         width: 250px;

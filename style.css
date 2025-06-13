@@ -218,7 +218,7 @@ section{
 }
 .projects{
     background-color: rgb(14, 27, 43);
-    height: 800px;
+    height: 1050px;
 }
 .projects .content{
     margin-top: 30px;
@@ -254,8 +254,8 @@ section{
 }
 #card5{
     position: relative;
-    right: 360px;
-    top: 560px;
+    right: 200px;
+    top: 315px;
 }
 .project-card:hover{
     transform: scale(1.1);

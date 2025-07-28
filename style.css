@@ -56,7 +56,7 @@ section{
     display: flex;
     align-items: center;
     background-color: rgb(14, 27, 43);
-    background-image: linear-gradient(360deg, #f0f0f0 0%, rgb(14, 27, 43) 80% );
+    background-image: linear-gradient(360deg, rgb(44, 88, 117) 0%, rgb(14, 27, 43) 60% );
 }
 .body{
     box-shadow: 0px 0px 20px 15px;
@@ -164,6 +164,26 @@ section{
     background-color: rgb(9, 60, 94);
     transform: scale(1.1);
 }
+.main-btn1{
+    color: white;
+    background-color: rgb(11, 80, 126);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600px;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    position: absolute;
+    top: 275px;
+    left: 320px;
+    transition: 0.7s ease;
+}
+.main-btn1:hover{
+    background-color: rgb(9, 60, 94);
+    transform: scale(1.1);
+}
 .social-icons a{
     color: white;
     font-size: 1.5em;
@@ -171,6 +191,7 @@ section{
     top: 365px;
     left: 110px;
     padding-right: 25px;
+    filter: drop-shadow(1px 1px 10px rgb(27, 121, 184));
 }
 .title{
     display: flex;
@@ -219,6 +240,10 @@ section{
 .projects{
     background-color: rgb(14, 27, 43);
 }
+.projects2{
+    display: flex;
+    flex-direction: column;
+}
 .projects .content{
     margin-top: 30px;
 }
@@ -240,6 +265,16 @@ section{
 #card3{
     position: absolute;
     right: 20px;
+}
+#card4{
+    position: absolute;
+    left: 20px;
+    top: 1725px;
+}
+#card6{
+    position: absolute;
+    right: 20px;
+    top: 1725px;
 }
 .project-card:hover{
     transform: scale(1.1);
@@ -287,6 +322,8 @@ section{
     color: white;
     font-size: 1.5em;
     padding-right: 25px;
+    filter: drop-shadow(1px 1px 10px rgb(27, 121, 184));
+
 }
 .footer-title{
     font-size: 1.3em;
@@ -312,18 +349,19 @@ section{
 }
 .main{
     width: 100%;
-    min-height: 70vh;
+    min-height: 75vh;
     display: flex;
     align-items: center;
     background-color: rgb(14, 27, 43);
-    background-image: linear-gradient(360deg, #f0f0f0 0%, rgb(14, 27, 43) 80% )}
+    background-image: linear-gradient(360deg, rgb(44, 88, 117) 0%, rgb(14, 27, 43) 60% );
+}
     .body {
         box-shadow: 0px 0px 20px 15px;
         border-radius: 20px;
         background-color: rgb(14, 27, 43);
         position: absolute;
         width: 190px;
-        height: 450px;
+        height: 490px;
         top: 80px;
         left: 80px;
         bottom: 60px;}
@@ -441,7 +479,29 @@ section{
         left: 10px;
         transition: 0.7s ease;
     }
+    .main-btn1{
+        color: white;
+        background-color: rgb(11, 80, 126);
+        text-decoration: none;
+        font-size: 0.9em;
+        font-weight: 600;
+        display: inline-block;
+        padding: 0.9375em 2.1875em;
+        letter-spacing: 1px;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        position: absolute;
+        top: 355px;
+        left: 10px;
+        transition: 0.7s ease;
+        width: 170px;
+        text-align: center;
+    }
     .main-btn:hover{
+        background-color: rgb(9, 60, 94);
+        transform: scale(1.1);
+    }
+    .main-btn1:hover{
         background-color: rgb(9, 60, 94);
         transform: scale(1.1);
     }
@@ -449,7 +509,7 @@ section{
         color: white;
         font-size: 1.2em;
         position: relative;
-        top: 365px;
+        top: 430px;
         left: 15px;
         padding-right: 25px;
     }
@@ -507,6 +567,16 @@ section{
         position: relative;
         left: 0px;
         bottom: 0px;
+    }
+    #card4{
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+    #card6{
+        position: relative;
+        left: 0px;
+        top: 0px;
     }
     #let{
         font-size: 2.5em;

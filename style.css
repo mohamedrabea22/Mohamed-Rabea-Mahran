@@ -40,14 +40,22 @@ header{
   right: 0;
   background-color: rgb(14, 27, 43);
   width: 250px;
-  display: none;
+  display: flex;
   flex-direction: column;
   padding: 10px;
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
   z-index: 100;
   border-radius: 10px;
   box-shadow: 0 0 10px #000;
 }
-
+.side-menu.show {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
 .side-menu a {
   padding: 15px;
   color: white;
@@ -55,7 +63,6 @@ header{
   border-bottom: 1px solid white;
   font-size: 18px;
 }
-
 .side-menu a:hover {
   background: white;
   color: rgb(14, 27, 43);
@@ -608,4 +615,3 @@ section{
         flex-direction: column;
     }
 }
-

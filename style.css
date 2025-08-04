@@ -616,10 +616,4 @@ section{
         flex-direction: column;
     }
 }
-@media (max-width: 992px) {
-    .body{
-        position: absolute;
-        height: 75vh;
-        top: 110px;
-    }
-}
+

@@ -11,10 +11,14 @@
 <body>
     <header>
         <a href="#" class="logo">Mohamed</a>
-        <nav class="navigation">
-            <a href="#services" class="ser">Services</a>
-            <a href="#projects" class="pro">Projects</a>
-            <a href="#contact" class="con">Contact</a>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <nav id="sideMenu" class="side-menu">
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
     <section class="main">
@@ -72,6 +76,60 @@
                 <div class="info">
                     <h3>Speaking English fluently</h3>
                     <p>Speaking English fluently with clear pronunciation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cards" id="skills">
+        <h2 class="title">Skills</h2>
+        <div class="content">
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <div class="info">
+                    <h2>HTML</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+                <div class="info">
+                    <h2>CSS</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-brands fa-square-js"></i>
+                </div>
+                <div class="info">
+                    <h2>JAVASCRIPT</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-brands fa-python"></i>
+                </div>
+                <div class="info">
+                    <h2>PYTHON</h2>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-brands fa-react"></i>
+                </div>
+                <div class="info">
+                    <h2>REACT.JS</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-language"></i>
+                </div>
+                <div class="info">
+                    <h2>ENGLISH LANGUAGE</h2>
                 </div>
             </div>
         </div>
@@ -165,6 +223,18 @@
                         </strong>
                     </div>
                 </div>
+                <div class="project-card" id="card8">
+                    <div class="project-image">
+                        <img src="weather.png" class="pic" alt="">
+                    </div>
+                    <div class="project-info">
+                        <p class="project-category">Creating Web Application & Writing clean code</p>
+                        <strong class="project-title">
+                            <span>Weather Application</span>
+                            <a href="https://mohamedrabea22.github.io/Weather-Application/" class="more-details" target="_blank">More details</a>
+                        </strong>
+                    </div>
+                </div>
             
         </div>
     </section>
@@ -199,5 +269,9 @@
                 <a href="https://youtube.com/@mahran420?si=7e7D5AOd4zrwPiTm" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </div>
     </footer>
+    <script src="app.js">
+
+
+    </script>
 </body>
 </html>

@@ -972,10 +972,11 @@ svg {
 }
 @media (min-width:768px) and (max-width: 1024px){
     .card{
-        width: 60%;
+        width: 35%;
     }
     .logo{
         position: fixed;
         left: 20px;
     }
+
 }

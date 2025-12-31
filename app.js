@@ -140,7 +140,7 @@ const slider = document.getElementById('slider');
     const drops = Array(Math.floor(columns)).fill(1);
 
     function draw() {
-      ctx.fillStyle = "#03173b0c";
+      ctx.fillStyle = "#0e1b2b17";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       ctx.fillStyle = "white";
@@ -189,3 +189,62 @@ const slider = document.getElementById('slider');
     }
 
     type();
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+
+      const bars = entry.target.querySelectorAll(".progress");
+      const numbers = entry.target.querySelectorAll(".percentage");
+
+      bars.forEach((bar, index) => {
+        const value = bar.getAttribute("data-progress");
+
+        // بطء حركة الشريط
+        bar.style.transition = "width 3s ease";
+        bar.style.width = value + "%";
+
+        // بطء عداد الأرقام
+        let current = 0;
+        const target = parseInt(value);
+        const speed = 40; // كلما زاد الرقم → الحركة أبطأ
+
+        const counter = setInterval(() => {
+          if (current >= target) {
+            clearInterval(counter);
+          } else {
+            current++;
+            numbers[index].textContent = current + "%";
+          }
+        }, speed);
+      });
+
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+const skillsSection = document.querySelector(".skills");
+observer.observe(skillsSection);
+
+
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let message = document.getElementById("message").value.trim();
+  let status = document.getElementById("status");
+
+  if (name === "" || email === "" || message === "") {
+    status.textContent = "Please fill in all required fields.";
+    status.style.color = "red";
+    return;
+  }
+
+  status.textContent = "Your message was sent successfully. ✅";
+  status.style.color = "green";
+
+  this.reset();
+});

@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Cairo:wght@200..1000&family=Lemonada:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Guerrilla&family=Quicksand:wght@300..700&display=swap');
-*{
+/* الخط الافتراضي للإنجليزي */
+html[lang="en"] body {
     font-family: "Quicksand", sans-serif;
+}
+
+/* الخط الخاص بالعربي */
+html[lang="ar"] body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+}
+
+*{
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,8 +30,9 @@ header{
 }
 
 .logo{
+    
     text-decoration: none;
-    color: rgb(14, 27, 43);
+    color: #0e1b2b;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.8em;
@@ -84,6 +97,64 @@ section{
 
 
 
+ .skills {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+    .skills h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 32px;
+      color: #111827;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .skill {
+      margin-bottom: 30px;
+    }
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .skill-header span {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .percentage {
+      font-size: 18px;
+      font-weight: 600;
+      color: #3b82f6;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 14px;
+      background: #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 10px;
+      position: relative;
+    }
+
+    .progress {
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, #0b507e, #0e1b2b);
+      border-radius: 10px;
+      transition: width 1.6s ease;
+    }
 
 
 
@@ -360,7 +431,6 @@ canvas {
         -webkit-background-clip: text; /* علشان يشتغل على كروم/سفاري */
         -webkit-text-fill-color: transparent; /* يخلي النص شفاف وياخد التدرج */
     }
-
     .card-content a {
       display: inline-block;
       margin-top: 8px;
@@ -505,11 +575,66 @@ svg {
 
 
 
+.about{
+    color: #0b507e;
+    text-align: center;
+    font-size: 1.5em;
+}
 
 
 
 
+.contact-form {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: #4c6e7c1f;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+}
 
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  outline: none;
+  border-radius: 8px;
+  
+  border: solid 1px #0b507e;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #4b79a1, #283e51);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.7s ease;
+}
+
+.contact-form button:hover {
+  transform: scale(1.1);
+}
+
+#status {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
 
 
 
@@ -558,7 +683,7 @@ svg {
 .title{
     display: flex;
     justify-content: center;
-    color: rgb(11, 80, 126);
+    color: #0b507e;
     font-size: 2.2em;
     font-weight: 500;
     z-index: 1000;
@@ -605,7 +730,7 @@ svg {
 }
 .info h2{
     text-align: center;
-    color: rgb(11, 80, 126);
+    color: #0b507e;
     font-weight: 600;
     margin: 10px;
 }
@@ -733,7 +858,9 @@ svg {
     background-color: rgb(14, 27, 43);
     background-image: linear-gradient(360deg, rgb(44, 88, 117) 0%, rgb(14, 27, 43) 60% );
 }
-
+    #about-me{
+        padding-top: 90px;
+    }
         .items{
             display: flex;
             justify-content: center;
@@ -901,13 +1028,14 @@ svg {
         padding-right: 5px;
     }
     .title{
-        font-size: 3em;
+        font-size: 2.5em;
         position: relative;
         left: 0px;
+        margin: 50px;
     }
     .card{
         width: 250px;
-        height: 280px;
+        height: 300px;
         position: relative;
         left: 0px;
         flex-direction: column;
@@ -972,11 +1100,10 @@ svg {
 }
 @media (min-width:768px) and (max-width: 1024px){
     .card{
-        width: 35%;
+        width: 45%;
     }
     .logo{
         position: fixed;
         left: 20px;
     }
-
 }

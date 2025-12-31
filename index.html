@@ -10,18 +10,19 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Mohamed</a>
-        <div class="social-icons">
+        <a href="#" class="logo" style="font-family: 'Quicksand', sans-serif;">Mohamed</a>
+        <div class="social-icons" translate="no" dir="ltr">
             <a href="https://wa.me/201208048295" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="https://www.facebook.com/share/16XHsm3MPi/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.linkedin.com/in/mohamed-rabea-mahran-9020b7320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/mohamedrabea22" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://youtube.com/@mahran420?si=7e7D5AOd4zrwPiTm" target="_blank"><i class="fa-brands fa-youtube"></i></a>
         </div>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <button class="menu-toggle" onclick="toggleMenu()" dir="rtr" translate="no">☰</button>
         
         <nav id="sideMenu" class="side-menu">
             <a href="#">Home</a>
+            <a href="#about-me">About Me</a>
             <a href="#services">Services</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
@@ -29,13 +30,25 @@
         </nav>
     </header>
     <section>
+
+
+    <!-- زر الترجمة 
+    <button class="lang-btn" id="langBtn">
+        🌐 AR
+    </button>
+-->
+
+
+
+
+
         <canvas id="matrix"></canvas>
 
   <!-- المحتوى -->
   <div class="container11">
     <img src="IMG-20250525-WA0006.png" alt="Mohamed" class="profile-pic">
     <h2>Hello, I'm Mohamed</h2>
-    <p class="typing" id="typing"></p>
+    <p class="typing" id="typing" style="font-family: 'Quicksand', sans-serif;" translate="no"></p>
     <br>
     <button class="btn">
         <a href="#projects">View My Work</a>
@@ -74,6 +87,10 @@
     <div class="bg-text orange" style="left:30%; animation-delay: 2s; overflow: hidden;">&lt;a&gt;</div>
     <div class="bg-text green" style="left:50%; animation-delay: 4s; overflow: hidden;">function()</div>
     <div class="bg-text blue" style="left:70%; animation-delay: 6s; overflow: hidden;">&lt;/div&gt;</div>
+    </section>
+    <section id="about-me">
+      <h2 class="title" id="about-me">About Me</h2>
+      <p class="about">I’m a Front-End Developer dedicated to creating clean, responsive, and user-friendly websites. I have strong experience with HTML, CSS, JavaScript, and modern UI practices. I’m passionate about turning ideas into real interactive interfaces and continuously learning new technologies to improve my work. I aim to build digital experiences that combine performance, accessibility, and modern design.</p>
     </section>
     <section class="cards" id="services">
         <h2 class="title">Services</h2>
@@ -120,89 +137,146 @@
     <section class="cards" id="skills">
         <h2 class="title">Skills</h2>
         <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <svg viewBox="0 0 400 200">
-                        <!-- المستطيل -->
-                        <rect class="outline-rect" x="20" y="40" width="360" height="120" rx="12" ry="12"/>
-                        <!-- النص -->
-                        <text class="outline-text" x="200" y="115">HTML</text>
-                    </svg>
-                </div>
-                <div class="info">
-                    <h2>HTML</h2>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <svg viewBox="0 0 400 200">
-                        <!-- المستطيل -->
-                        <rect class="outline-rect" x="20" y="40" width="360" height="120" rx="12" ry="12"/>
-                        <!-- النص -->
-                        <text class="outline-text" x="200" y="115">CSS</text>
-                    </svg>
-                </div>
-                <div class="info">
-                    <h2>CSS</h2>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <svg viewBox="0 0 400 200">
-                        <!-- المستطيل -->
-                        <rect class="outline-rect" x="20" y="40" width="360" height="120" rx="12" ry="12"/>
-                        <!-- النص -->
-                        <text class="outline-text" x="200" y="115">JAVASCRIPT</text>
-                    </svg>                
-                </div>
-                <div class="info">
-                    <h2>JAVASCRIPT</h2>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <svg viewBox="0 0 400 200">
-                        <!-- المستطيل -->
-                        <rect class="outline-rect" x="20" y="40" width="360" height="120" rx="12" ry="12"/>
-                        <!-- النص -->
-                        <text class="outline-text" x="200" y="115">PYTHON</text>
-                    </svg>
-                </div>
-                <div class="info">
-                    <h2>PYTHON</h2>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="icon">
-                    <svg viewBox="0 0 400 200">
-                        <!-- المستطيل -->
-                        <rect class="outline-rect" x="20" y="40" width="360" height="120" rx="12" ry="12"/>
-                        <!-- النص -->
-                        <text class="outline-text" x="200" y="115">REACT.JS</text>
-                    </svg>
-                </div>
-                <div class="info">
-                    <h2>REACT.JS</h2>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <svg viewBox="0 0 400 200">
-                        <!-- المستطيل -->
-                        <rect class="outline-rect" x="20" y="40" width="360" height="120" rx="12" ry="12"/>
-                        <!-- النص -->
-                        <text class="outline-text" x="200" y="115">ENGLISH</text>
-                    </svg>
-                </div>
-                <div class="info">
-                    <h2>ENGLISH LANGUAGE</h2>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-        
+            <div class="skills">
+
+                <div class="card">
+                    <div class="icon">
+                        <svg viewBox="0 0 400 200">
+                            <!-- المستطيل -->
+                            <rect class="outline-rect" x="20" y="40" width="360" height="120" rx="12" ry="12"/>
+                            <!-- النص -->
+                            <text class="outline-text" x="200" y="115">HTML</text>
+                        </svg>
+                    </div>
+                   <div class="skill">
+      <div class="skill-header">
+        <span class="percentage">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="90"></div>
+      </div>
     </div>
+                    <div class="info">
+                        <h2>HTML</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <svg viewBox="0 0 400 200">
+                            <!-- المستطيل -->
+                            <rect class="outline-rect" x="20" y="40" width="360" height="120" rx="12" ry="12"/>
+                            <!-- النص -->
+                            <text class="outline-text" x="200" y="115">CSS</text>
+                        </svg>
+                    </div>
+<div class="skill">
+      <div class="skill-header">
+        <span class="percentage">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="85"></div>
+      </div>
+    </div>
+                    <div class="info">
+                        <h2>CSS</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <svg viewBox="0 0 400 200">
+                            <!-- المستطيل -->
+                            <rect class="outline-rect" x="20" y="40" width="360" height="120" rx="12" ry="12"/>
+                            <!-- النص -->
+                            <text class="outline-text" x="200" y="115">JAVASCRIPT</text>
+                        </svg>        
+            
+                    </div>
+    
+                   <div class="skill">
+      <div class="skill-header">
+        
+        <span class="percentage">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="80"></div>
+      </div>
+    </div>
+                    <div class="info">
+                        <h2>JAVASCRIPT</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <svg viewBox="0 0 400 200">
+                            <!-- المستطيل -->
+                            <rect class="outline-rect" x="20" y="40" width="360" height="120" rx="12" ry="12"/>
+                            <!-- النص -->
+                            <text class="outline-text" x="200" y="115">PYTHON</text>
+                        </svg>
+                    </div>
+                   <div class="skill">
+      <div class="skill-header">
+
+        <span class="percentage">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="70"></div>
+      </div>
+    </div>
+                    <div class="info">
+                        <h2>PYTHON</h2>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="icon">
+                        <svg viewBox="0 0 400 200">
+                            <!-- المستطيل -->
+                            <rect class="outline-rect" x="20" y="40" width="360" height="120" rx="12" ry="12"/>
+                            <!-- النص -->
+                            <text class="outline-text" x="200" y="115">REACT.JS</text>
+                        </svg>
+                    </div>
+                   <div class="skill">
+      <div class="skill-header">
+
+        <span class="percentage">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="85"></div>
+      </div>
+    </div>
+                    <div class="info">
+                        <h2>REACT.JS</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <svg viewBox="0 0 400 200">
+                            <!-- المستطيل -->
+                            <rect class="outline-rect" x="20" y="40" width="360" height="120" rx="12" ry="12"/>
+                            <!-- النص -->
+                            <text class="outline-text" x="200" y="115">ENGLISH</text>
+                        </svg>
+                    </div>
+                   <div class="skill">
+      <div class="skill-header">
+
+        <span class="percentage">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="80"></div>
+      </div>
+    </div>
+                    <div class="info">
+                        <h2>ENGLISH LANGUAGE (B2)</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+            
+        </div>
+            </div>
 
         <!-- عناصر الخلفية -->
         <div class="bg-text blue" style="left:10%; animation-delay: 0s; overflow: hidden;">{ }</div>
@@ -222,28 +296,29 @@
         <img src="hamada.png" alt="صورة 1">
         <div class="card-content">
           <h3>Veterinary website</h3>
-          <a href="https://mohamedrabea22.github.io/Hamada-Ali-Nagy/" target="_blank">Preview</a>
+          <p>hello</p>
+          <a href="https://mohamedrabea22.github.io/Hamada-Ali-Nagy/" target="_blank">More Details</a>
         </div>
       </div>
       <div class="card1">
         <img src="Screenshot 2025-11-05 150407.png" alt="صورة 1">
         <div class="card-content">
           <h3>Coffee website</h3>
-          <a href="https://mohamedrabea22.github.io/Coffee-website/" target="_blank">Preview</a>
+          <a href="https://mohamedrabea22.github.io/Coffee-website/" target="_blank">More Details</a>
         </div>
       </div>
       <div class="card1">
         <img src="store.png" alt="صورة 1">
         <div class="card-content">
           <h3>Test Store</h3>
-          <a href="https://mohamedrabea22.github.io/Demo-store/" target="_blank">Preview</a>
+          <a href="https://mohamedrabea22.github.io/Demo-store/" target="_blank">More Details</a>
         </div>
       </div>
       <div class="card1">
         <img src="academy.png" alt="صورة 1">
         <div class="card-content">
           <h3>Mahran Academy</h3>
-          <a href="https://mohamedrabea22.github.io/Mahran-Academy/" target="_blank">Preview</a>
+          <a href="https://mohamedrabea22.github.io/Mahran-Academy/" target="_blank">More Details</a>
         </div>
       </div>
 
@@ -251,7 +326,7 @@
         <img src="calculator.jpg" alt="صورة 2">
         <div class="card-content">
           <h3>Calculator</h3>
-          <a href="https://mohamedrabea22.github.io/Calculator/" target="_blank">Preview</a>
+          <a href="https://mohamedrabea22.github.io/Calculator/" target="_blank">More Details</a>
         </div>
       </div>
 
@@ -259,7 +334,7 @@
         <img src="To Do List.png" alt="صورة 3">
         <div class="card-content">
           <h3>Do Tasks</h3>
-          <a href="https://mohamedrabea22.github.io/To-Do-List/" target="_blank">Preview</a>
+          <a href="https://mohamedrabea22.github.io/To-Do-List/" target="_blank">More Details</a>
         </div>
       </div>
 
@@ -267,35 +342,35 @@
         <img src="hangman-game_6168854.png" alt="صورة 4">
         <div class="card-content">
           <h3>Hangman Game</h3>
-          <a href="https://mohamedrabea22.github.io/Hangman-Game/" target="_blank">Preview</a>
+          <a href="https://mohamedrabea22.github.io/Hangman-Game/" target="_blank">More Details</a>
         </div>
       </div>
       <div class="card1">
         <img src="sna.png" alt="صورة 4">
         <div class="card-content">
           <h3>Snake Game</h3>
-          <a href="https://mohamedrabea22.github.io/Snake-Game/" target="_blank">Preview</a>
+          <a href="https://mohamedrabea22.github.io/Snake-Game/" target="_blank">More Details</a>
         </div>
       </div>
       <div class="card1">
         <img src="weather.png" alt="صورة 4">
         <div class="card-content">
           <h3>Weather Application</h3>
-          <a href="https://mohamedrabea22.github.io/Weather-Application/" target="_blank">Preview</a>
+          <a href="https://mohamedrabea22.github.io/Weather-Application/" target="_blank">More Details</a>
         </div>
       </div>
       <div class="card1">
         <img src="xo.png" alt="صورة 4">
         <div class="card-content">
           <h3>Tic Tac Toe Game</h3>
-          <a href="https://mohamedrabea22.github.io/Tic-Tac-Toe-Game/" target="_blank">Preview</a>
+          <a href="https://mohamedrabea22.github.io/Tic-Tac-Toe-Game/" target="_blank">More Details</a>
         </div>
       </div>
       <div class="card1">
         <img src="WhatsApp Image 2025-05-26 at 02.08.33_1813db2a.jpg" alt="صورة 4">
         <div class="card-content">
           <h3>Self Motivation Speech</h3>
-          <a href="https://youtube.com/shorts/G73VTaipwOU?si=QQWk__JyxTxWOvBf" target="_blank">Preview</a>
+          <a href="https://youtube.com/shorts/G73VTaipwOU?si=QQWk__JyxTxWOvBf" target="_blank">More Details</a>
         </div>
       </div>
 
@@ -339,7 +414,19 @@
                     <p>+201208048295</p>
                 </div>
             </div>
-            
+            <form id="contactForm" class="contact-form">
+              <h2 class="title">Message Us</h2>
+
+              <input type="text" id="name" placeholder="Your Name" required>
+
+              <input type="email" id="email" placeholder="Your Email" required>
+
+              <textarea id="message" placeholder="Write Your Message Here ..." required></textarea>
+
+              <button type="submit">Submit</button>
+
+              <p id="status"></p>
+            </form>
 
     
     </section>
@@ -353,10 +440,11 @@
                 <a href="https://youtube.com/@mahran420?si=7e7D5AOd4zrwPiTm" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </div>
     </footer>
+
+
     <script src="app.js">
 
 
     </script>
 </body>
 </html>
-

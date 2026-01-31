@@ -116,46 +116,35 @@ section{
       letter-spacing: 1px;
     }
 
-    .skill {
-      margin-bottom: 30px;
-    }
+    
 
-    .skill-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
 
-    .skill-header span {
-      font-size: 18px;
-      font-weight: 600;
-      color: #1f2937;
-    }
 
-    .percentage {
-      font-size: 18px;
-      font-weight: 600;
-      color: #3b82f6;
+
+
+
+    .progress-container {
+      position: absolute;
+      margin: 50px;
+      width: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      margin-top: 50px;
     }
 
     .progress-bar {
-      width: 100%;
-      height: 14px;
-      background: #e5e7eb;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-top: 10px;
-      position: relative;
+      height: 25px;
+      width: 0%;
+      background: linear-gradient(90deg, #0e1b2b, rgb(11, 80, 126));;
+      border-radius: 30px;
+      transition: width 0.3s ease;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      line-height: 25px;
     }
-
-    .progress {
-      width: 0;
-      height: 100%;
-      background: linear-gradient(90deg, #0b507e, #0e1b2b);
-      border-radius: 10px;
-      transition: width 1.6s ease;
-    }
-
 
 
 
@@ -538,7 +527,7 @@ svg {
   /* المستطيل */
   .outline-rect {
     fill: none;
-    stroke: #0b507e;
+    stroke: #00ccff;
     stroke-width: 4;
     stroke-dasharray: 960;   /* طول محيط المستطيل تقريبي */
     stroke-dashoffset: 960;
@@ -548,7 +537,7 @@ svg {
   /* النص */
   .outline-text {
     fill: none;
-    stroke: #0b507e;
+    stroke: #00ccff;
     stroke-width: 2;
     stroke-dasharray: 400;
     stroke-dashoffset: 400;
@@ -587,7 +576,7 @@ svg {
 .contact-form {
   width: 100%;
   max-width: 400px;
-  margin: 10px;
+  margin: auto;
   padding: 20px;
   background: #4c6e7c1f;
   backdrop-filter: blur(10px);
@@ -635,6 +624,218 @@ svg {
   margin-top: 10px;
   font-size: 14px;
 }
+
+
+
+
+
+
+
+
+
+.container5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    --border-radius: 1rem;
+    --bg-color: #393e4100;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 185px;
+    height: 400px;
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+    color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+}
+
+.card::before {
+    width: 200%;
+    height: 200%;
+    background-image: conic-gradient(var(--color) 0deg,
+            transparent 60deg, transparent 180deg, var(--color) 180deg,
+            transparent 240deg);
+    inset: -50%;
+    z-index: -2;
+    animation: borderanimation 4s linear infinite;
+}
+
+.card:hover::before {
+    animation-play-state: paused;
+}
+
+@keyframes borderanimation {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.card::after {
+    --inset: 4px;
+    background: #093c5e;
+    inset: var(--inset);
+    border-radius: calc(var(--border-radius) - var(--inset));
+    z-index: -1;
+    transition: all 0.3s linear;
+}
+
+.card:hover::after {
+    background: #1b79b8;
+}
+
+.card i {
+    position: absolute;
+    top: 10px;
+    font-size: 8rem;
+    margin: 20px;
+    color: transparent;
+    -webkit-text-stroke: thin #00ccff;
+}
+
+.card:hover i {
+    color: #00ccff;
+    -webkit-text-stroke-width: 0;
+}
+
+.card .title1 {
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    line-height: 2rem;
+    color: #00ccff;
+}
+
+.card .description {
+    font-size: 1.1em;
+    text-align: center;
+    color: #00ccff;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card22 {
+    --border-radius: 1rem;
+    --bg-color: #393e4100;
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    height: 400px;
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+    color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.card22::before,
+.card22::after {
+    content: '';
+    position: absolute;
+}
+
+.card22::before {
+    width: 200%;
+    height: 200%;
+    background-image: conic-gradient(var(--color) 0deg,
+            transparent 60deg, transparent 180deg, var(--color) 180deg,
+            transparent 240deg);
+    inset: -50%;
+    z-index: -2;
+    animation: borderanimation 4s linear infinite;
+}
+
+.card22:hover::before {
+    animation-play-state: paused;
+}
+
+@keyframes borderanimation {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.card22::after {
+    --inset: 4px;
+    background: #0b507e;
+    inset: var(--inset);
+    border-radius: calc(var(--border-radius) - var(--inset));
+    z-index: -1;
+    transition: all 0.3s linear;
+}
+
+.card22:hover::after {
+    background: #1b79b8;
+}
+
+.card22 i {
+    font-size: 6rem;
+    margin: 20px;
+    color: transparent;
+    -webkit-text-stroke: thin #00ccff;
+}
+
+.card22:hover i {
+    color: #00ccff;
+    -webkit-text-stroke-width: 0;
+}
+
+.card22 .title1 {
+    text-align: center;
+    font-size: 2em;
+    line-height: 3rem;
+    color: #00ccff;
+}
+
+.card22 .description {
+    font-size: 1.1em;
+    text-align: center;
+    color: #00ccff;
+    
+}
+
 
 
 
@@ -689,55 +890,17 @@ svg {
     z-index: 1000;
     margin-bottom: 30px;
 }
-.content{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.card{
-    background-color: white;
-    width: 35%;
-    box-shadow: 0 5px 25px rgb(27, 121, 184, 19%);
-    border-radius: 10px;
-    padding: 25px;
-    z-index: 999;
-    text-align: center;
-    margin: 7px;
-    transition: 0.7s ease;
-}
-.card:hover{
-    transform: scale(1.1);
-}
+
 .icon{
-    color: rgb(11, 80, 126);
-    font-size: 7em;
+    color: white;
+    font-size: 25em;
     text-align: center;
 }
 .icon img{
     color: #0b507e;
     width: 60%;
 }
-.info{
-    text-align: center;
-}
-.info h3{
-    color: rgb(11, 80, 126);
-    text-align: center;
-    font-size: 1em;
-    font-weight: 600;
-    margin: 10px;
-}
-.info h2{
-    text-align: center;
-    color: #0b507e;
-    font-weight: 600;
-    margin: 10px;
-}
-.info p {
-    color: rgb(11, 80, 126);
-    font-weight: 550;
-}
+
 #services{
     background-color: #0e1b2b;
 
@@ -751,6 +914,8 @@ svg {
 }
 .projects .content{
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
 }
 .project-card{
     background-color: white;
@@ -860,6 +1025,9 @@ svg {
 }
     #about-me{
         padding-top: 90px;
+    }
+    .card22{
+        height: 550px;
     }
         .items{
             display: flex;
@@ -1035,16 +1203,16 @@ svg {
     }
     .card{
         width: 250px;
-        height: 300px;
+        height: 400px;
         position: relative;
         left: 0px;
         flex-direction: column;
-    }
+    }/*
     .icon{
         font-size: 5em;
         position: relative;
         top: -20px;
-    }
+    }*/
     .info h3{
         font-size: 1.1em;
         position: relative;
@@ -1102,9 +1270,15 @@ svg {
     .card{
         width: 45%;
     }
+
     .logo{
         position: fixed;
         left: 20px;
     }
 }
+@media (min-width:1024px){
+    .card{
+        width: 45%;
+    }
 
+}

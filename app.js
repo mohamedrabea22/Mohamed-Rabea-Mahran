@@ -189,43 +189,44 @@ const slider = document.getElementById('slider');
     }
 
     type();
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
 
-    if (entry.isIntersecting) {
 
-      const bars = entry.target.querySelectorAll(".progress");
-      const numbers = entry.target.querySelectorAll(".percentage");
 
-      bars.forEach((bar, index) => {
-        const value = bar.getAttribute("data-progress");
+  
+  const progressBars = document.querySelectorAll(".progress-bar");
 
-        // بطء حركة الشريط
-        bar.style.transition = "width 3s ease";
-        bar.style.width = value + "%";
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startProgress(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
 
-        // بطء عداد الأرقام
-        let current = 0;
-        const target = parseInt(value);
-        const speed = 40; // كلما زاد الرقم → الحركة أبطأ
-
-        const counter = setInterval(() => {
-          if (current >= target) {
-            clearInterval(counter);
-          } else {
-            current++;
-            numbers[index].textContent = current + "%";
-          }
-        }, speed);
-      });
-
-      observer.unobserve(entry.target);
-    }
+  progressBars.forEach(bar => {
+    observer.observe(bar);
   });
-});
 
-const skillsSection = document.querySelector(".skills");
-observer.observe(skillsSection);
+  function startProgress(bar) {
+    let target = parseInt(bar.dataset.target);
+    let width = 0;
+
+    // عشان ما يعيدش يشتغل لو اشتغل قبل كده
+    if (bar.dataset.started) return;
+    bar.dataset.started = "true";
+
+    let interval = setInterval(() => {
+      if (width >= target) {
+        clearInterval(interval);
+      } else {
+        width++;
+        bar.style.width = width + "%";
+        bar.textContent = width + "%";
+      }
+    }, 25);
+  }
+
+
 
 
 

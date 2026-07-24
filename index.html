@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="doc_title">محمد ربيع مهران | مطوّر واجهات أماميّة - Frontend Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Custom Animated Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Animated Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">&lt;<span class="logo-name">Mohamed</span>/&gt;</a>
+            
+            <div class="nav-right">
+                <div class="nav-controls">
+                    <button id="langToggle" class="control-btn">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="langText">EN</span>
+                    </button>
+                    <button id="themeToggle" class="control-btn">
+                        <i class="fa-solid fa-moon" id="themeIcon"></i>
+                    </button>
+                </div>
+
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="nav-link" data-i18n="nav_home">الرئيسية</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav_about">عنّي</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav_services">الخدمات</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav_skills">المهارات</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav_projects">المشاريع</a></li>
+                <li><a href="#contact" class="btn-glow primary" data-i18n="nav_contact">تواصل معي</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero container">
+        <div class="hero-content" data-reveal>
+            <div class="badge-glow">
+                <span class="pulse-dot"></span>
+                <span data-i18n="hero_badge">متاح للمشاريع والفرص البرمجية الجديدة</span>
+            </div>
+            
+            <h1 data-i18n="hero_title">أهلاً بك، أنا <br><span class="text-gradient">محمد ربيع مهران</span></h1>
+            <h2 class="hero-subtitle font-code">&lt;<span class="typing-text"></span> /&gt;</h2>
+            <p data-i18n="hero_desc">مطوّر واجهات أماميّة (Frontend Developer) أحوّل الأفكار والتصاميم المبتكرة إلى تجارب مستخدم حية، تفاعلية، وسريعة للغاية.</p>
+
+            <div class="hero-btns">
+                <a href="#projects" class="btn-glow primary"><span data-i18n="hero_btn_projects">معاينة المشاريع</span> <i class="fa-solid fa-arrow-left"></i></a>
+                <a href="#contact" class="btn-glow secondary" data-i18n="hero_btn_contact">تواصل معي</a>
+            </div>
+        </div>
+
+        <div class="hero-visual-side" data-reveal>
+            <div class="hero-avatar-wrapper" data-tilt>
+                <div class="avatar-card">
+                    <div class="avatar-frame">
+                        <img src="me.jpg" alt="محمد ربيع مهران" class="avatar-img">
+                        <div class="avatar-glow"></div>
+                    </div>
+                    <div class="avatar-badge font-code">
+                        <i class="fa-solid fa-code"></i> <span data-i18n="hero_avatar_role">Frontend Engineer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-terminal font-code" data-tilt>
+                <div class="terminal-header">
+                    <div class="dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="terminal-title">developer.js</span>
+                </div>
+                <div class="terminal-body">
+<pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string" data-i18n="code_name">'محمد ربيع مهران'</span>,
+  <span class="code-prop">role</span>: <span class="code-string">'Frontend Developer'</span>,
+  <span class="code-prop">skills</span>: [
+    <span class="code-string">'HTML5'</span>, <span class="code-string">'CSS3'</span>, 
+    <span class="code-string">'JavaScript'</span>, <span class="code-string">'React'</span>
+  ],
+  <span class="code-prop">hardWorker</span>: <span class="code-bool">true</span>
+};</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container about-section">
+        <h2 class="section-title" data-reveal><i class="fa-solid fa-user-code"></i> <span data-i18n="about_title">نبذة عنّي</span></h2>
+        <div class="about-grid">
+            <div class="about-card" data-tilt data-reveal>
+                <p class="about-desc" data-i18n="about_desc">أنا مطور واجهات أمامية متخصص في إنشاء مواقع ويب أنيقة، سريعة الاستجابة، وسهلة الاستخدام. أمتلك خبرة واسعة في لغات HTML وCSS وJavaScript، بالإضافة إلى أحدث ممارسات تصميم واجهات المستخدم. لدي شغف بتحويل الأفكار إلى واجهات تفاعلية حقيقية، وأحرص على التعلم المستمر للتقنيات الجديدة لتحسين عملي. أهدف إلى بناء تجارب رقمية تجمع بين الأداء العالي، وسهولة الوصول، والتصميم العصري.</p>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h3>+15</h3>
+                        <p data-i18n="stat_projects">مشروع مكتمل</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>+2</h3>
+                        <p data-i18n="stat_years">سنوات خبرة</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>100%</h3>
+                        <p data-i18n="stat_commit">التزام بالدقة والمواعيد</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title" data-reveal><i class="fa-solid fa-cubes-stacked"></i> <span data-i18n="services_title">الخدمات والإمكانيات</span></h2>
+            <div class="services-grid">
+                <div class="service-card" data-tilt data-reveal>
+                    <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3 data-i18n="service_1_title">تطوير الواجهات الأمامية</h3>
+                    <p data-i18n="service_1_desc">بناء واجهات مستخدم تفاعلية باستخدام HTML5 وCSS3 وJavaScript وأحدث أطر العمل لكود نظيف ومنظم.</p>
+                </div>
+                <div class="service-card" data-tilt data-reveal>
+                    <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3 data-i18n="service_2_title">التصميم والتجاوب الكامل</h3>
+                    <p data-i18n="service_2_desc">ضمان ظهور موقعك بشكل متناسق ومبهر على جميع الأجهزة الهواتف الذكية والتابلت والشاشات الكبيرة.</p>
+                </div>
+                <div class="service-card" data-tilt data-reveal>
+                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 data-i18n="service_3_title">الأنيميشن والتفاعلات الحية</h3>
+                    <p data-i18n="service_3_desc">إضافة حركات ناعمة وتأثيرات بصرية تفاعلية تمنح موقعك هوية مميزة وجذابة.</p>
+                </div>
+                <div class="service-card" data-tilt data-reveal>
+                    <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3 data-i18n="service_4_title">تحسين الأداء والسرعة</h3>
+                    <p data-i18n="service_4_desc">تحسين كود الموقع وضغط الملفات للحصول على أعلى تقييمات في أداء وسرعة استجابة الصفحات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container skills-section">
+        <h2 class="section-title" data-reveal><i class="fa-solid fa-laptop-code"></i> <span data-i18n="skills_title">المهارات والتقنيات</span></h2>
+        <div class="skills-grid">
+            <div class="skill-card" data-tilt data-reveal><i class="fa-brands fa-html5 skill-icon html"></i><span class="skill-name font-code"> HTML5</span></div>
+            <div class="skill-card" data-tilt data-reveal><i class="fa-brands fa-css3-alt skill-icon css"></i><span class="skill-name font-code"> CSS3</span></div>
+            <div class="skill-card" data-tilt data-reveal><i class="fa-brands fa-js skill-icon js"></i><span class="skill-name font-code"> JavaScript (ES6+)</span></div>
+            <div class="skill-card" data-tilt data-reveal><i class="fa-brands fa-react skill-icon react"></i><span class="skill-name font-code"> React.js</span></div>
+            <div class="skill-card" data-tilt data-reveal><i class="fa-brands fa-python skill-icon python"></i><span class="skill-name font-code">Python</span></div>
+            <div class="skill-card" data-tilt data-reveal><i class="fa-brands fa-git-alt skill-icon git"></i><span class="skill-name font-code"> Git / GitHub</span></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container projects-section">
+        <h2 class="section-title" data-reveal><i class="fa-solid fa-terminal"></i> <span data-i18n="projects_title">أحدث مشاريعي</span></h2>
+        <div class="projects-grid">
+            <div class="project-card" data-tilt data-reveal>
+                <div class="project-img-wrapper">
+                    <img src="hamada.jpg" alt="Project 1">
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj_1_title">موقع بيطري</h3>
+                    <p data-i18n="proj_1_desc">موقع احترافي لعيادة بيطرية يعرض الخدمات والخبرات بطريقة عصرية.</p>
+                    <div class="tags font-code"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    <div class="project-links">
+                        <a href="https://mohamedrabea22.github.io/Hamada-Ali-Nagy/" target="_blank" class="btn-link"><span data-i18n="proj_demo">المعاينة الحية</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/mohamedrabea22/Hamada-Ali-Nagy.git" target="_blank" class="btn-link secondary"><i class="fa-brands fa-github"></i> <span data-i18n="proj_code">الكود</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-tilt data-reveal>
+                <div class="project-img-wrapper">
+                    <img src="quran.jpg" alt="Project 2">
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj_2_title">موقع القرآن الكريم</h3>
+                    <p data-i18n="proj_2_desc">موقع إلكتروني للقرآن الكريم يوفر تجربة سهلة لقراءة السور والتنقل بينها بتصميم حديث ومتجاوب.</p>
+                    <div class="tags font-code"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    <div class="project-links">
+                        <a href="https://mohamedrabea22.github.io/Quran-Kareem/" target="_blank" class="btn-link"><span data-i18n="proj_demo">المعاينة الحية</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/mohamedrabea22/Quran-Kareem.git" target="_blank" class="btn-link secondary"><i class="fa-brands fa-github"></i> <span data-i18n="proj_code">الكود</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-tilt data-reveal>
+                <div class="project-img-wrapper">
+                    <img src="coffee.png" alt="Project 3">
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj_3_title">متجر قهوة</h3>
+                    <p data-i18n="proj_3_desc">موقع احترافي لمقهى بتصميم عصري ومتجاوب يعرض المنتجات والخدمات بأسلوب جذاب.</p>
+                    <div class="tags font-code"><span>JavaScript</span><span>CSS</span><span>HTML</span></div>
+                    <div class="project-links">
+                        <a href="https://mohamedrabea22.github.io/Coffee-website/" target="_blank" class="btn-link"><span data-i18n="proj_demo">المعاينة الحية</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/mohamedrabea22/Coffee-website.git" target="_blank" class="btn-link secondary"><i class="fa-brands fa-github"></i> <span data-i18n="proj_code">الكود</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-tilt data-reveal>
+                <div class="project-img-wrapper">
+                    <img src="store.png" alt="Project 4">
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj_4_title">متجر تجريبي</h3>
+                    <p data-i18n="proj_4_desc">متجر إلكتروني تجريبي بواجهة حديثة وتصميم متجاوب يوفر تجربة تسوق سلسة وسهلة.</p>
+                    <div class="tags font-code"><span>JavaScript</span><span>CSS</span><span>HTML</span></div>
+                    <div class="project-links">
+                        <a href="https://mohamedrabea22.github.io/Demo-store/" target="_blank" class="btn-link"><span data-i18n="proj_demo">المعاينة الحية</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/mohamedrabea22/Demo-store.git" target="_blank" class="btn-link secondary"><i class="fa-brands fa-github"></i> <span data-i18n="proj_code">الكود</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-tilt data-reveal>
+                <div class="project-img-wrapper">
+                    <img src="qr-code (11).png" alt="Project 5">
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj_5_title">مولد رمز الاستجابة السريعة</h3>
+                    <p data-i18n="proj_5_desc">مولد أكواد QR سريع وسهل الاستخدام يتيح إنشاء رموز قابلة للمشاركة في ثوانٍ.</p>
+                    <div class="tags font-code"><span>JavaScript</span><span>CSS</span><span>HTML</span></div>
+                    <div class="project-links">
+                        <a href="https://mohamedrabea22.github.io/QR-Code-Generator/" target="_blank" class="btn-link"><span data-i18n="proj_demo">المعاينة الحية</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/mohamedrabea22/QR-Code-Generator.git" target="_blank" class="btn-link secondary"><i class="fa-brands fa-github"></i> <span data-i18n="proj_code">الكود</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-tilt data-reveal>
+                <div class="project-img-wrapper">
+                    <img src="qr scanner.jpg" alt="Project 6">
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj_6_title">ماسح رمز الاستجابة السريعة</h3>
+                    <p data-i18n="proj_6_desc">ماسح أكواد QR يتيح قراءة الرموز بسرعة باستخدام كاميرا الجهاز بواجهة سهلة الاستخدام.</p>
+                    <div class="tags font-code"><span>JavaScript</span><span>CSS</span><span>HTML</span></div>
+                    <div class="project-links">
+                        <a href="https://mohamedrabea22.github.io/QR-Code-Scanner/" target="_blank" class="btn-link"><span data-i18n="proj_demo">المعاينة الحية</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/mohamedrabea22/QR-Code-Scanner.git" target="_blank" class="btn-link secondary"><i class="fa-brands fa-github"></i> <span data-i18n="proj_code">الكود</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-tilt data-reveal>
+                <div class="project-img-wrapper">
+                    <img src="calculator.jpg" alt="Project 7">
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj_7_title">الآلة الحاسبة</h3>
+                    <p data-i18n="proj_7_desc">آلة حاسبة تفاعلية توفر العمليات الحسابية الأساسية بواجهة بسيطة وسريعة الاستجابة.</p>
+                    <div class="tags font-code"><span>JavaScript</span><span>CSS</span><span>HTML</span></div>
+                    <div class="project-links">
+                        <a href="https://mohamedrabea22.github.io/Calculator/" target="_blank" class="btn-link"><span data-i18n="proj_demo">المعاينة الحية</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/mohamedrabea22/Calculator.git" target="_blank" class="btn-link secondary"><i class="fa-brands fa-github"></i> <span data-i18n="proj_code">الكود</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-tilt data-reveal>
+                <div class="project-img-wrapper">
+                    <img src="To Do List.png" alt="Project 8">
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj_8_title">تنفيذ المهام</h3>
+                    <p data-i18n="proj_8_desc">تطبيق لإدارة المهام اليومية يساعد على تنظيم الأعمال وتتبع الإنجاز بواجهة بسيطة ومتجاوبة.</p>
+                    <div class="tags font-code"><span>JavaScript</span><span>CSS</span><span>HTML</span></div>
+                    <div class="project-links">
+                        <a href="https://mohamedrabea22.github.io/To-Do-List/" target="_blank" class="btn-link"><span data-i18n="proj_demo">المعاينة الحية</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/mohamedrabea22/To-Do-List.git" target="_blank" class="btn-link secondary"><i class="fa-brands fa-github"></i> <span data-i18n="proj_code">الكود</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-tilt data-reveal>
+                <div class="project-img-wrapper">
+                    <img src="hangman-game_6168854.png" alt="Project 9">
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj_9_title">لعبة «الجلاد»</h3>
+                    <p data-i18n="proj_9_desc">لعبة Hangman تفاعلية تعتمد على تخمين الكلمات بتصميم ممتع ومتجاوب.</p>
+                    <div class="tags font-code"><span>JavaScript</span><span>CSS</span><span>HTML</span></div>
+                    <div class="project-links">
+                        <a href="https://mohamedrabea22.github.io/Hangman-Game/" target="_blank" class="btn-link"><span data-i18n="proj_demo">المعاينة الحية</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/mohamedrabea22/Hangman-Game.git" target="_blank" class="btn-link secondary"><i class="fa-brands fa-github"></i> <span data-i18n="proj_code">الكود</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-tilt data-reveal>
+                <div class="project-img-wrapper">
+                    <img src="snake.jpg" alt="Project 10">
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj_10_title">لعبة الثعبان</h3>
+                    <p data-i18n="proj_10_desc">لعبة Snake الكلاسيكية بتصميم حديث وتحكم سلس وتجربة لعب ممتعة.</p>
+                    <div class="tags font-code"><span>JavaScript</span><span>CSS</span><span>HTML</span></div>
+                    <div class="project-links">
+                        <a href="https://mohamedrabea22.github.io/Snake-Game/" target="_blank" class="btn-link"><span data-i18n="proj_demo">المعاينة الحية</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/mohamedrabea22/Snake-Game.git" target="_blank" class="btn-link secondary"><i class="fa-brands fa-github"></i> <span data-i18n="proj_code">الكود</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-tilt data-reveal>
+                <div class="project-img-wrapper">
+                    <img src="weather.png" alt="Project 10">
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj_11_title">تطبيق الطقس</h3>
+                    <p data-i18n="proj_11_desc">تطبيق طقس تفاعلي يعرض الأحوال الجوية الحالية والتوقعات بواجهة حديثة وسهلة الاستخدام.</p>
+                    <div class="tags font-code"><span>JavaScript</span><span>CSS</span><span>HTML</span></div>
+                    <div class="project-links">
+                        <a href="https://mohamedrabea22.github.io/Weather-Application/" target="_blank" class="btn-link"><span data-i18n="proj_demo">المعاينة الحية</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/mohamedrabea22/Weather-Application.git" target="_blank" class="btn-link secondary"><i class="fa-brands fa-github"></i> <span data-i18n="proj_code">الكود</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container contact-section">
+        <h2 class="section-title" data-reveal><i class="fa-solid fa-paper-plane"></i> <span data-i18n="contact_title">تواصل معي</span></h2>
+        <div class="contact-wrapper">
+            <div class="contact-info" data-tilt data-reveal>
+                <h3 data-i18n="contact_subtitle">هل لديك فكرة أو مشروع جديد؟</h3>
+                <p data-i18n="contact_desc">أنا جاهز لبناء واجهتك القادمة أو الانضمام لمشروعك. يسعدني دائماً تواصلك ومناقشة التفاصيل.</p>
+                <div class="info-items">
+                    <div class="info-item"><i class="fa-solid fa-user"></i><span data-i18n="contact_name">محمد ربيع مهران</span></div>
+                    <div class="info-item"><i class="fa-solid fa-envelope"></i><span data-i18n="contact_email">med886418@gmail.com</span></div>
+                    <div class="info-item"><i class="fa-solid fa-location-dot"></i><span data-i18n="contact_location">المنيا، مصر</span></div>
+                    <div class="info-item"><i class="fa-solid fa-phone"></i><span data-i18n="contact_call">01122624866</span></div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/mohamedrabea22" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mohamed-rabea-mahran-9020b7320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i> </a>
+                    <a href="https://www.facebook.com/share/16XHsm3MPi/" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://wa.me/201208048295" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="tel:01122624866" title="Phone"><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+
+            <form class="contact-form" data-tilt data-reveal id="contactForm">
+                <div class="input-group"><input type="text" data-i18n-ph="input_name" placeholder="الاسم الكريم" required></div>
+                <div class="input-group"><input type="email" data-i18n-ph="input_email" placeholder="البريد الإلكتروني" required></div>
+                <div class="input-group"><textarea data-i18n-ph="input_msg" placeholder="تفاصيل رسالتك أو مشروعك..." rows="5" required></textarea></div>
+                <button type="submit" class="btn-glow primary"><span data-i18n="btn_send">إرسال الرسالة</span> <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer font-code">
+        <p><span data-i18n="footer_text">تم التصميم والتطوير بواسطة</span> <strong>Mohamed Rabea Mehran</strong> &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

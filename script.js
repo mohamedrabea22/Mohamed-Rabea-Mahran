@@ -223,7 +223,7 @@ const translations = {
         contact_title: "Contact Me",
         contact_subtitle: "Have a project or idea in mind?",
         contact_desc: "I'm ready to build your next web app or join your team. Feel free to reach out anytime!",
-        contact_name: "Mohamed Rabea Mehran",
+        contact_name: "Mohamed Rabea Mahran",
         contact_email: "med886418@gmail.com",
         contact_location: "Minya, Egypt",
         contact_call: "01122624866",
